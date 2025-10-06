@@ -1,4 +1,4 @@
-/* Estilos Gerais (Reset Básico) */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,41 +12,39 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* ------------------------------------------- */
-/* Passo 3: Configuração Inicial do Flexbox */
-/* ------------------------------------------- */
 
 .gallery {
-    /* 1. Torna o contêiner um Flex Container */
+    
     display: flex;
-    /* 2. Permite que os itens quebrem para a linha seguinte */
+   
     flex-wrap: wrap; 
-    /* 3. Distribui o espaço vazio entre os itens (ou centraliza se preferir 'center') */
+   
     justify-content: space-around; 
     padding: 10px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 .photo-item {
-    /* Largura Padrão (Desktop/Tablet) */
-    /* Define uma largura que permita 3 ou 4 itens por linha no desktop */
-    width: 23%; /* Cerca de 4 itens por linha, sobrando espaço para o 'space-around' */
-    min-height: 150px;
-    margin: 10px 0; /* Margem vertical para separação */
     
-    background-color: #007bff; /* Cor de fundo padrão */
+  
+    width: 23%; 
+    min-height: 150px;
+    margin: 10px 0; 
+    
+    background-color: #007bff; 
     color: white;
     text-align: center;
-    line-height: 150px; /* Centraliza o texto verticalmente */
+    line-height: 150px; 
     font-size: 1.2em;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease; /* Para o Passo 6 (melhorias) */
+    transition: transform 0.3s ease; 
 }
 
-/* Cores diferentes para simular imagens distintas */
+
 .photo-1 { background-color: #ff6347; }
 .photo-2 { background-color: #4682b4; }
 .photo-3 { background-color: #3cb371; }
@@ -62,39 +60,43 @@ h1 {
 }
 
 
-/* ------------------------------------------- */
-/* Passo 4: Tornando a Galeria Responsiva */
-/* ------------------------------------------- */
-
-/* Para Tablets (Telas entre 600px e 992px) */
 @media (max-width: 992px) {
-    /* Altera para 3 fotos por linha */
+    
     .photo-item {
-        width: 30%; /* Três itens por linha */
+        width: 30%; 
     }
 }
 
-/* Para Smartphones (Telas até 600px) */
+
 @media (max-width: 600px) {
-    /* Altera para 2 fotos por linha */
+    
     .photo-item {
-        width: 45%; /* Dois itens por linha */
-        min-height: 120px;
+        width: 45%; 
         line-height: 120px;
         font-size: 1em;
     }
 }
 
-/* Para Smartphones (Telas muito pequenas, uma foto por linha) */
+
 @media (max-width: 400px) {
-    /* Altera para 1 foto por linha */
+  
     .photo-item {
-        width: 90%; /* Um item por linha */
+        width: 90%; 
         margin-left: auto;
-        margin-right: auto; /* Centraliza o item */
+        margin-right: auto; 
     }
     .gallery {
-         /* Ao invés de space-around, centraliza o contêiner principal */
          justify-content: center; 
     }
+}
+
+h1{
+    border: #000000 solid 3px;
+    width: 50%;
+    margin: 0 auto;
+    background: #007bff;
+    margin-top: 0 auto;
+    border-radius: 25px;
+    display: block;
+    color: white;
 }
